@@ -18,7 +18,7 @@ const Desc = styled.div`
   
 `
 
-const P = styled.p`
+const P = styled.h4`
   color:#8C8C8C;
   :nth-child(1){
     color: black
@@ -64,7 +64,7 @@ const ListItem = ({results}) => {
                 <Record>
                 <Left>
                   <Icon>
-                    <VscLocation size={40} />
+                    <VscLocation size={40} color="#7E7E7E" />
                   </Icon>
                   <Desc>
                     <P>{result[2]}</P>

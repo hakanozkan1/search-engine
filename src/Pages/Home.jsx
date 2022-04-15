@@ -47,9 +47,14 @@ const SearchContainer = styled.div`
 const ShowMore = styled.div`
   width: 100%;
   text-align: center;
-  color: black;
+  color: #204080;
   font-weight: bold;
+  :hover {
+    color: #4F75C2;
+  }
 `;
+
+
 
 const Home = () => {
 
@@ -77,11 +82,11 @@ const Home = () => {
         <SearchContainer>
         <ListItem results={results} />
         {results.length >=3 && 
+        <Link to={'/list'} style={{ textDecoration: 'none', color: "black" }}>
               <ShowMore>
-                <Link to={'/list'} style={{ textDecoration: 'none', color: "black" }}>
-                <p>Show more...</p>
-                </Link>
+                <h3>Show more...</h3>
               </ShowMore>
+              </Link>
         }
         </SearchContainer>}
       
