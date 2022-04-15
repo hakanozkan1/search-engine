@@ -19,8 +19,11 @@ const Button = styled.button`
   border-radius: 5px;
   color:  ${props => props.active ? "black" : "white"};
   background-color: ${props => props.active ? "white" : "#204080"};
-  cursor: pointer;
-  
+  cursor: ${props => props.active ? "pointer" : "default"};
+  :hover {
+    background-color: ${props => props.active ? "#1e90ff" : "#204080"};
+    color: white;
+  }
 `
 
 const Pages = ({ resultsPerPage, totalPosts, paginate, currentPage }) => {
